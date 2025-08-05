@@ -32,7 +32,11 @@ namespace Proje_1
                 }
 
                 // Bu örnekte sabit kullanıcı adı/şifre var. Gerçekte veritabanından kontrol edilir.
-                if (kullaniciAdi != "yonetici")
+                if(kullaniciAdi != "yonetici" && sifre != "1234")
+                {
+                    MessageBox.Show("Kullanıcı adı ve şifre hatalı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (kullaniciAdi != "yonetici")
                 {
                     MessageBox.Show("Kullanıcı adı hatalı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

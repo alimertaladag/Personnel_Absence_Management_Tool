@@ -22,7 +22,7 @@ namespace Proje_1
         {
             string kullaniciAdi = textBox1.Text.Trim();
             string sifre = textBox2.Text;
-
+                   
             if (kullaniciAdi == "" || sifre == "")
             {
                 MessageBox.Show("Lütfen tüm alanları doldurun.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -30,7 +30,11 @@ namespace Proje_1
             }
 
             // Bu örnekte sabit kullanıcı adı/şifre var. Gerçekte veritabanından kontrol edilir.
-            if (kullaniciAdi != "personel")
+            if(kullaniciAdi != "personel" && sifre != "1234")
+            {
+                MessageBox.Show("Kullanıcı adı ve şifre hatalı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (kullaniciAdi != "personel")
             {
                 MessageBox.Show("Kullanıcı adı hatalı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

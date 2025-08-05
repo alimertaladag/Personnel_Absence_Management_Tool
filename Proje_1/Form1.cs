@@ -25,14 +25,14 @@ namespace Proje_1
         {
             Form2 personelForm = new Form2();
             personelForm.Show();
-            this.Hide(); // veya this.Close();
+            this.Close(); // veya this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Form3 yoneticiForm = new Form3();
             yoneticiForm.Show();
-            this.Hide(); // veya this.Close();
+            this.Close(); // veya this.Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
