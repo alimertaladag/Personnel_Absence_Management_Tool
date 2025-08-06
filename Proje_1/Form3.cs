@@ -47,8 +47,9 @@ namespace Proje_1
                 else
                 {
                     MessageBox.Show("Giriş başarılı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form11 personelAnaMenuForm = new Form11();
+                    personelAnaMenuForm.Show();
                     this.Hide();
-                    // yeni form gösterilebilir
                 }
 
             }
