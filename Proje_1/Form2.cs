@@ -20,7 +20,7 @@ namespace Proje_1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string kullaniciAdi = textBox1.Text.Trim();
+                string kullaniciAdi = textBox1.Text.Trim();
             string sifre = textBox2.Text;
                    
             if (kullaniciAdi == "" || sifre == "")
@@ -45,8 +45,9 @@ namespace Proje_1
             else
             {
                 MessageBox.Show("Giriş başarılı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Form4 personelAnaMenuForm = new Form4();
+                personelAnaMenuForm.Show();
                 this.Hide();
-                // yeni form gösterilebilir
             }
         }
 
