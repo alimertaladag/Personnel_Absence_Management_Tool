@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Proje_1
 {
@@ -15,6 +16,7 @@ namespace Proje_1
 
         double butonOpacity = 0.0;
         Point hedefLabelKonum, hedefButton1Konum, hedefButton2Konum;
+        
 
         public Form1()
         {
@@ -29,7 +31,25 @@ namespace Proje_1
             label1.Top += 40;
             button1.Top += 40;
             button2.Top += 40;
+
+            // MySQL bağlantısını kontrol et
+            string connStr = "server=localhost;port=3306;database=personel_izin_takip;uid=root;pwd=root;charset=utf8mb4;SslMode=None;";
+
+            try
+            {
+                using (var conn = new MySqlConnection(connStr))
+                {
+                    conn.Open();
+                    MessageBox.Show("MySQL bağlantısı başarılı!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bağlantı hatası: " + ex.Message);
+            }
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
