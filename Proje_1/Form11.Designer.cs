@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,39 +52,24 @@
             this.panel1.Size = new System.Drawing.Size(1037, 49);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // button6
             // 
-            this.panel2.Location = new System.Drawing.Point(13, 68);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1037, 509);
-            this.panel2.TabIndex = 1;
+            this.button6.Location = new System.Drawing.Point(930, 3);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(104, 42);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "CIKIS";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button1
+            // button5
             // 
-            this.button1.Location = new System.Drawing.Point(4, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "KISISEL BILGILER";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(162, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 42);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "IZIN YONETIMI";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(332, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 42);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "SIFRE DEGISTIR";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button5.Location = new System.Drawing.Point(667, 4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(149, 42);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "IZIN ISTATISLIKLERI";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -96,24 +81,40 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // button3
             // 
-            this.button5.Location = new System.Drawing.Point(667, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 42);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "IZIN ISTATISLIKLERI";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(332, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(158, 42);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "SIFRE DEGISTIR";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // button2
             // 
-            this.button6.Location = new System.Drawing.Point(930, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 42);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "CIKIS";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button2.Location = new System.Drawing.Point(162, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 42);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "IZIN YONETIMI";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(4, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 42);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "KISISEL BILGILER";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(13, 68);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1037, 509);
+            this.panel2.TabIndex = 1;
             // 
             // Form11
             // 

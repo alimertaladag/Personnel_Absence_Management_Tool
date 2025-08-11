@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,41 +14,78 @@ namespace Proje_1
     public partial class Form2 : Form
     {
         double butonOpacity = 0.0;
+
+        string connectionString = "Server=localhost;Database=personel_izin_takip;Uid=root;Pwd=root;";
+
         public Form2()
         {
             InitializeComponent();
         }
 
+        public static class GlobalKullanici
+        {
+            public static string ID { get; set; }
+            public static string Ad { get; set; }
+            public static string Soyad { get; set; }
+            public static string Pozisyon { get; set; }
+            public static string KullaniciAdi { get; set; }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-                string kullaniciAdi = textBox1.Text.Trim();
-            string sifre = textBox2.Text;
-                   
-            if (kullaniciAdi == "" || sifre == "")
+                string kullaniciAdi = textBox1.Text;
+                string sifre = textBox2.Text;
+
+            if (string.IsNullOrWhiteSpace(kullaniciAdi) || string.IsNullOrWhiteSpace(sifre))
             {
                 MessageBox.Show("Lütfen tüm alanları doldurun.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Bu örnekte sabit kullanıcı adı/şifre var. Gerçekte veritabanından kontrol edilir.
-            if(kullaniciAdi != "personel" && sifre != "1234")
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                MessageBox.Show("Kullanıcı adı ve şifre hatalı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (kullaniciAdi != "personel")
-            {
-                MessageBox.Show("Kullanıcı adı hatalı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (sifre != "1234")
-            {
-                MessageBox.Show("Şifre hatalı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show("Giriş başarılı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Form4 personelAnaMenuForm = new Form4();
-                personelAnaMenuForm.Show();
-                this.Hide();
+                try
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM personel WHERE kullanici_adi=@kullaniciAdi AND sifre=@sifre";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@kullaniciAdi", kullaniciAdi);
+                    cmd.Parameters.AddWithValue("@sifre", sifre);
+
+                    MySqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        // Global değişkenlere bilgileri ata
+                        GlobalKullanici.ID = dr["id"].ToString();
+                        GlobalKullanici.Ad = dr["ad"].ToString();
+                        GlobalKullanici.Soyad = dr["soyad"].ToString();
+                        GlobalKullanici.Pozisyon = dr["pozisyon"].ToString();
+                        GlobalKullanici.KullaniciAdi = dr["kullanici_adi"].ToString();
+
+                        MessageBox.Show("Giriş başarılı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Pozisyona göre menüye yönlendir
+                        if (GlobalKullanici.Pozisyon.ToLower() == "yönetici")
+                        {
+                            Form4 frm = new Form4();
+                            frm.Show();
+                        }
+                        else
+                        {
+                            Form4 frm = new Form4();
+                            frm.Show();
+                        }
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kullanıcı adı veya şifre hatalı!", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
             }
         }
 

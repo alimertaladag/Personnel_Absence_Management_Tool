@@ -17,6 +17,16 @@ namespace Proje_1
             InitializeComponent();
         }
 
+        private void OpenChildForm(Form childForm)
+        {
+            panel2.Controls.Clear();
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel2.Controls.Add(childForm);
+            childForm.Show();
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -25,6 +35,11 @@ namespace Proje_1
         private void button6_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form5());
         }
     }
 }

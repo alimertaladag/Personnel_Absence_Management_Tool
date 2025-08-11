@@ -16,5 +16,11 @@ namespace Proje_1
         {
             InitializeComponent();
         }
+        private async void Form6_Load(object sender, EventArgs e)
+        {
+            // Adana Büyükşehir Belediyesi duyurular sayfasını aç
+            webBrowser1.ScriptErrorsSuppressed = true; // Script hatalarını gizle
+            webBrowser1.Navigate("https://www.adana.bel.tr/tr/duyuru");
+        }
     }
 }
