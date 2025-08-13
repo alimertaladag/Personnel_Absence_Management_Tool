@@ -59,7 +59,7 @@ namespace Proje_1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form10());
+            OpenChildForm(new FormYardim());
         }
 
         private void button5_Click(object sender, EventArgs e)

@@ -41,6 +41,7 @@ namespace Proje_1
                 {
                     conn.Open();
                     MessageBox.Show("MySQL bağlantısı başarılı!");
+                    conn.Close();
                 }
             }
             catch (Exception ex)
