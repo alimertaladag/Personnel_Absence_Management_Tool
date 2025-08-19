@@ -57,20 +57,9 @@ namespace Proje_1
                             GlobalKullanici.Soyad = dr["soyad"].ToString();
                             GlobalKullanici.Pozisyon = dr["pozisyon"].ToString();
                             GlobalKullanici.KullaniciAdi = dr["kullanici_adi"].ToString();
-
                             MessageBox.Show("Giriş başarılı!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            // Pozisyona göre menüye yönlendir
-                            if (GlobalKullanici.Pozisyon.ToLower() == "yönetici")
-                            {
                                 Form11 frm1 = new Form11();
-                                frm1.Show();
-                            }
-                            else
-                            {
-                                Form5 frm = new Form5();
-                                frm.Show();
-                            }
+                                frm1.Show();   
                             this.Hide();
                         }
                         else

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -36,8 +38,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(113, 597);
             this.panel1.TabIndex = 0;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button5.Location = new System.Drawing.Point(4, 534);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(101, 60);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "CIKIS";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(4, 460);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(101, 68);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "YARDIM";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -124,26 +146,6 @@
             this.button8.Text = "X";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(4, 460);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(101, 68);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "YARDIM";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(4, 548);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 46);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "CIKIS";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form4
             // 

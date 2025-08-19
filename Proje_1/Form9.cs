@@ -14,7 +14,8 @@ namespace Proje_1
 {
     public partial class Form9 : Form
     {
-        private int personelId; // Global'den doldurulacak
+        int personelId; // Hem personel hem yönetici için geçerli olacak
+
         private readonly MySqlConnection baglanti =
             new MySqlConnection("Server=localhost;Database=personel_izin_takip;Uid=root;Pwd='root';");
 
@@ -26,12 +27,12 @@ namespace Proje_1
 
         private void Form9_Load(object sender, EventArgs e)
         {
-            string globalIdStr = GlobalKullanici.ID; // GlobalKullanici.ID string tipinde olmalı
+            string globalIdStr = GlobalKullanici.ID;
 
             if (!int.TryParse(globalIdStr, out personelId) || personelId <= 0)
             {
                 MessageBox.Show("Kullanıcı ID'si geçersiz. Lütfen tekrar giriş yapın.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close(); // veya etkinliği sonlandır
+                this.Close();
                 return;
             }
 
@@ -67,11 +68,21 @@ namespace Proje_1
             {
                 baglanti.Open();
 
-                // Önce mevcut şifre doğru mu kontrol et
+                // Önce personel tablosunda ara
+                string tabloAdi = "personel";
                 MySqlCommand kontrolKomut = new MySqlCommand("SELECT sifre FROM personel WHERE id = @id", baglanti);
                 kontrolKomut.Parameters.AddWithValue("@id", personelId);
 
                 object sonuc = kontrolKomut.ExecuteScalar();
+
+                // Eğer personelde bulunmazsa yönetici tablosuna bak
+                if (sonuc == null)
+                {
+                    tabloAdi = "yonetici";
+                    kontrolKomut = new MySqlCommand("SELECT sifre FROM yonetici WHERE id = @id", baglanti);
+                    kontrolKomut.Parameters.AddWithValue("@id", personelId);
+                    sonuc = kontrolKomut.ExecuteScalar();
+                }
 
                 if (sonuc == null)
                 {
@@ -83,8 +94,8 @@ namespace Proje_1
                 }
                 else
                 {
-                    // Şifreyi güncelle
-                    MySqlCommand guncelleKomut = new MySqlCommand("UPDATE personel SET sifre = @yeniSifre WHERE id = @id", baglanti);
+                    // Şifreyi güncelle (hangi tabloda bulunduysa orayı güncelleyecek)
+                    MySqlCommand guncelleKomut = new MySqlCommand($"UPDATE {tabloAdi} SET sifre = @yeniSifre WHERE id = @id", baglanti);
                     guncelleKomut.Parameters.AddWithValue("@yeniSifre", yeniSifre);
                     guncelleKomut.Parameters.AddWithValue("@id", personelId);
 
