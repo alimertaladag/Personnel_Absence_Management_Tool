@@ -46,5 +46,10 @@ namespace Proje_1
         {
             OpenChildForm(new Form9());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new IzinYonetimiForm()); 
+        }
     }
 }
