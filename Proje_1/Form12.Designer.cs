@@ -73,19 +73,19 @@ namespace Proje_1
             this.dgvIzinler.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvIzinler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvIzinler.Location = new System.Drawing.Point(12, 50);
+            this.dgvIzinler.Location = new System.Drawing.Point(12, 44);
             this.dgvIzinler.MultiSelect = false;
             this.dgvIzinler.Name = "dgvIzinler";
             this.dgvIzinler.ReadOnly = true;
             this.dgvIzinler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvIzinler.Size = new System.Drawing.Size(860, 320);
+            this.dgvIzinler.Size = new System.Drawing.Size(788, 229);
             this.dgvIzinler.TabIndex = 2;
             this.dgvIzinler.SelectionChanged += new System.EventHandler(this.dgvIzinler_SelectionChanged);
             // 
             // cmbPersonel
             // 
             this.cmbPersonel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPersonel.Location = new System.Drawing.Point(110, 388);
+            this.cmbPersonel.Location = new System.Drawing.Point(110, 296);
             this.cmbPersonel.Name = "cmbPersonel";
             this.cmbPersonel.Size = new System.Drawing.Size(240, 21);
             this.cmbPersonel.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace Proje_1
             // dtpBaslama
             // 
             this.dtpBaslama.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBaslama.Location = new System.Drawing.Point(440, 388);
+            this.dtpBaslama.Location = new System.Drawing.Point(444, 296);
             this.dtpBaslama.Name = "dtpBaslama";
             this.dtpBaslama.Size = new System.Drawing.Size(120, 20);
             this.dtpBaslama.TabIndex = 6;
@@ -101,14 +101,14 @@ namespace Proje_1
             // dtpBitis
             // 
             this.dtpBitis.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBitis.Location = new System.Drawing.Point(615, 388);
+            this.dtpBitis.Location = new System.Drawing.Point(615, 296);
             this.dtpBitis.Name = "dtpBitis";
             this.dtpBitis.Size = new System.Drawing.Size(120, 20);
             this.dtpBitis.TabIndex = 8;
             // 
             // nudGunSayisi
             // 
-            this.nudGunSayisi.Location = new System.Drawing.Point(110, 428);
+            this.nudGunSayisi.Location = new System.Drawing.Point(110, 336);
             this.nudGunSayisi.Maximum = new decimal(new int[] {
             365,
             0,
@@ -130,14 +130,14 @@ namespace Proje_1
             // 
             // txtNeden
             // 
-            this.txtNeden.Location = new System.Drawing.Point(270, 428);
+            this.txtNeden.Location = new System.Drawing.Point(270, 336);
             this.txtNeden.Name = "txtNeden";
-            this.txtNeden.Size = new System.Drawing.Size(465, 20);
+            this.txtNeden.Size = new System.Drawing.Size(375, 20);
             this.txtNeden.TabIndex = 12;
             // 
             // txtDurum
             // 
-            this.txtDurum.Location = new System.Drawing.Point(110, 468);
+            this.txtDurum.Location = new System.Drawing.Point(110, 376);
             this.txtDurum.Name = "txtDurum";
             this.txtDurum.ReadOnly = true;
             this.txtDurum.Size = new System.Drawing.Size(200, 20);
@@ -162,7 +162,7 @@ namespace Proje_1
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(373, 460);
+            this.btnEkle.Location = new System.Drawing.Point(373, 368);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(100, 32);
             this.btnEkle.TabIndex = 15;
@@ -171,7 +171,7 @@ namespace Proje_1
             // 
             // btnDuzenle
             // 
-            this.btnDuzenle.Location = new System.Drawing.Point(615, 460);
+            this.btnDuzenle.Location = new System.Drawing.Point(491, 368);
             this.btnDuzenle.Name = "btnDuzenle";
             this.btnDuzenle.Size = new System.Drawing.Size(100, 32);
             this.btnDuzenle.TabIndex = 16;
@@ -180,7 +180,7 @@ namespace Proje_1
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(615, 500);
+            this.btnSil.Location = new System.Drawing.Point(615, 370);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(100, 32);
             this.btnSil.TabIndex = 17;
@@ -189,7 +189,7 @@ namespace Proje_1
             // 
             // btnOnayla
             // 
-            this.btnOnayla.Location = new System.Drawing.Point(748, 420);
+            this.btnOnayla.Location = new System.Drawing.Point(660, 330);
             this.btnOnayla.Name = "btnOnayla";
             this.btnOnayla.Size = new System.Drawing.Size(140, 32);
             this.btnOnayla.TabIndex = 18;
@@ -198,7 +198,7 @@ namespace Proje_1
             // 
             // btnReddet
             // 
-            this.btnReddet.Location = new System.Drawing.Point(730, 460);
+            this.btnReddet.Location = new System.Drawing.Point(730, 368);
             this.btnReddet.Name = "btnReddet";
             this.btnReddet.Size = new System.Drawing.Size(140, 32);
             this.btnReddet.TabIndex = 19;
@@ -207,7 +207,7 @@ namespace Proje_1
             // 
             // lblPersonel
             // 
-            this.lblPersonel.Location = new System.Drawing.Point(12, 390);
+            this.lblPersonel.Location = new System.Drawing.Point(12, 298);
             this.lblPersonel.Name = "lblPersonel";
             this.lblPersonel.Size = new System.Drawing.Size(90, 24);
             this.lblPersonel.TabIndex = 3;
@@ -215,7 +215,7 @@ namespace Proje_1
             // 
             // lblBas
             // 
-            this.lblBas.Location = new System.Drawing.Point(370, 390);
+            this.lblBas.Location = new System.Drawing.Point(370, 298);
             this.lblBas.Name = "lblBas";
             this.lblBas.Size = new System.Drawing.Size(70, 24);
             this.lblBas.TabIndex = 5;
@@ -223,7 +223,7 @@ namespace Proje_1
             // 
             // lblBit
             // 
-            this.lblBit.Location = new System.Drawing.Point(570, 390);
+            this.lblBit.Location = new System.Drawing.Point(570, 298);
             this.lblBit.Name = "lblBit";
             this.lblBit.Size = new System.Drawing.Size(40, 24);
             this.lblBit.TabIndex = 7;
@@ -231,7 +231,7 @@ namespace Proje_1
             // 
             // lblGun
             // 
-            this.lblGun.Location = new System.Drawing.Point(12, 430);
+            this.lblGun.Location = new System.Drawing.Point(12, 338);
             this.lblGun.Name = "lblGun";
             this.lblGun.Size = new System.Drawing.Size(90, 24);
             this.lblGun.TabIndex = 9;
@@ -239,7 +239,7 @@ namespace Proje_1
             // 
             // lblNeden
             // 
-            this.lblNeden.Location = new System.Drawing.Point(210, 430);
+            this.lblNeden.Location = new System.Drawing.Point(210, 338);
             this.lblNeden.Name = "lblNeden";
             this.lblNeden.Size = new System.Drawing.Size(50, 24);
             this.lblNeden.TabIndex = 11;
@@ -247,7 +247,7 @@ namespace Proje_1
             // 
             // lblDurum
             // 
-            this.lblDurum.Location = new System.Drawing.Point(12, 470);
+            this.lblDurum.Location = new System.Drawing.Point(12, 378);
             this.lblDurum.Name = "lblDurum";
             this.lblDurum.Size = new System.Drawing.Size(90, 24);
             this.lblDurum.TabIndex = 13;
@@ -255,7 +255,7 @@ namespace Proje_1
             // 
             // IzinYonetimiForm
             // 
-            this.ClientSize = new System.Drawing.Size(900, 580);
+            this.ClientSize = new System.Drawing.Size(899, 481);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.btnAra);
             this.Controls.Add(this.dgvIzinler);

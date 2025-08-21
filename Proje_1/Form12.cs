@@ -282,7 +282,7 @@ namespace Proje_1
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            ChangeDurum("Onaylandı");
+            ChangeDurum("Onaylandi");
         }
 
         private void btnReddet_Click(object sender, EventArgs e)

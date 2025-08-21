@@ -51,5 +51,10 @@ namespace Proje_1
         {
             OpenChildForm(new IzinYonetimiForm()); 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormIzinIstatistikleri()); 
+        }
     }
 }
