@@ -5,97 +5,88 @@ Bu proje, kurum ve işletmelerde personel izin süreçlerini dijital ortamda yö
 
 2. Projenin Kapsamı
 
-Sistem; yönetici ve personel olmak üzere iki farklı kullanıcı tipine sahiptir.
+-Sistem; yönetici ve personel olmak üzere iki farklı kullanıcı tipine sahiptir.
 
-Personel Kullanıcıları:
+-Personel Kullanıcıları:
 
-İzin talebi oluşturabilir.
+-İzin talebi oluşturabilir.
 
-Mevcut izin durumlarını görüntüleyebilir.
+-Mevcut izin durumlarını görüntüleyebilir.
 
-Geçmiş izin kayıtlarını inceleyebilir.
+-Geçmiş izin kayıtlarını inceleyebilir.
 
-Şifre güncelleme ve kişisel bilgiler üzerinde düzenleme yapabilir.
+-Şifre güncelleme ve kişisel bilgiler üzerinde düzenleme yapabilir.
 
-Yönetici Kullanıcıları:
+-Yönetici Kullanıcıları:
 
-Tüm personellerin izin taleplerini görüntüleyebilir.
+-Tüm personellerin izin taleplerini görüntüleyebilir.
 
-Onaylama, reddetme ve düzenleme işlemleri gerçekleştirebilir.
+-Onaylama, reddetme ve düzenleme işlemleri gerçekleştirebilir.
 
-Personel listelerini yönetebilir.
+-Personel listelerini yönetebilir.
 
-İstatistiksel raporlar alabilir.
+-İstatistiksel raporlar alabilir.
 
 3. Kullanılan Teknolojiler
 
-Programlama Dili: C# (.NET Framework – Windows Forms)
++Programlama Dili: C# (.NET Framework – Windows Forms)
 
-Veritabanı: MySQL
++Veritabanı: MySQL
 
-IDE: Visual Studio 2022
++IDE: Visual Studio 2022
 
-Versiyon Kontrol: Git & GitHub
++Versiyon Kontrol: Git & GitHub
 
 4. Sistem Mimarisi
 
 Veri Tabanı Katmanı:
 
-Personel bilgileri
+*Personel bilgileri
 
-İzin türleri
+*İzin türleri
 
-İzin talepleri
+*İzin talepleri
 
-Yönetici hesapları
+*Yönetici hesapları
 
 Uygulama Katmanı:
 
-Form tabanlı kullanıcı arayüzleri
+*Form tabanlı kullanıcı arayüzleri
 
-Veritabanı bağlantıları (MySql.Data.MySqlClient)
+*Veritabanı bağlantıları (MySql.Data.MySqlClient)
 
-Yetkilendirme ve kullanıcı giriş işlemleri
+*Yetkilendirme ve kullanıcı giriş işlemleri
 
 Sunum Katmanı:
 
-Personel ve yönetici için ayrı ana menüler
+*Personel ve yönetici için ayrı ana menüler
 
-Kolay erişim sağlayan butonlar ve menüler
+*Kolay erişim sağlayan butonlar ve menüler
 
-Grafiksel raporlar (izin istatistikleri)
+*Grafiksel raporlar (izin istatistikleri)
 
 5. Kurulum Adımları
 
 Gerekli Ortam:
 
-Visual Studio 2022 veya üstü
+-Visual Studio 2022 veya üstü
 
-MySQL Server ve MySQL Workbench
+-MySQL Server ve MySQL Workbench
 
-Git kurulu bilgisayar
+-Git kurulu bilgisayar
 
 Adımlar:
 
 Proje dosyalarını GitHub’dan klonlayın:
 
-git clone https://github.com/kullaniciadi/personel-izin-takip.git
+1-git clone https://github.com/kullaniciadi/personel-izin-takip.git
 
 
-MySQL üzerinde personel_izin_takip isimli veritabanı oluşturun.
+2- MySQL üzerinde personel_izin_takip isimli veritabanı oluşturun.
 
-İlgili tabloları çalıştırarak veritabanını yapılandırın.
+3- İlgili tabloları çalıştırarak veritabanını yapılandırın.
 
-Visual Studio’da app.config dosyasında bağlantı cümlesini güncelleyin:
-
-<connectionStrings>
-   <add name="MySqlConnection"
-        connectionString="Server=localhost;Database=personel_izin_takip;Uid=root;Pwd=1234;" 
-        providerName="MySql.Data.MySqlClient"/>
-</connectionStrings>
-
-
-Uygulamayı çalıştırarak giriş ekranına erişin.
+4- Uygulamayı çalıştırarak giriş ekranına erişin.
 
 6. Projenin Katkıları
 
